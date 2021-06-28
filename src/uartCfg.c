@@ -6,7 +6,7 @@
  */
 
 /* Includes */
-#include "com/uart/config/src/uartCfg.h"
+#include "com/config/uart_cnf/src/uartCnf.h"
 #include "lpuart1.h"
 /* Local variables */
 
@@ -17,7 +17,7 @@ statusType UART_InitInterfaceCfg(const uart_instanceType instance, uartConfigTyp
 {
 	statusType retStatus = AX_STATUS_SUCCESS;
 
-	retStatus = (statusType)LPUART_DRV_Init(instance, uartConfig->lpuartStatePtr,uartConfig->lpuartUserConfig);
+	retStatus = (statusType)LPUART_DRV_Init(instance, uartConfig->uartStatePtr,uartConfig->uartUserConfig);
 
 	return retStatus;
 }
@@ -150,8 +150,8 @@ uart_interfaces uart_interfacesCfg =
 
 uartConfigType uart_ConfigurationCfg =
 {
-		.lpuartStatePtr = &lpuart1_State,
-		.lpuartUserConfig = &lpuart1_InitConfig0
+		.uartStatePtr = &lpuart1_State,
+		.uartUserConfig = &lpuart1_InitConfig0
 
 };
 

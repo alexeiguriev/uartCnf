@@ -17,8 +17,8 @@ typedef enum
 
 typedef struct
 {
-	lpuart_state_t * lpuartStatePtr;
-	const lpuart_user_config_t * lpuartUserConfig;
+	lpuart_state_t * uartStatePtr;
+	const lpuart_user_config_t * uartUserConfig;
 
 }uart_congigDefType;
 
