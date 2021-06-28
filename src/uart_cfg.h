@@ -7,25 +7,9 @@
 
 #ifndef AX_UART_CFG_H_
 #define AX_UART_CFG_H_
+#include "com/uart/static/if/uart_types.h"
 
-#include "lpuart1.h"
-
-typedef enum
-{
-	uart_instance = INST_LPUART1,
-}uart_instanceDefType;
-
-typedef struct
-{
-	lpuart_state_t * lpuartStatePtr;
-	const lpuart_user_config_t * lpuartUserConfig;
-
-}uart_congigDefType;
-
-typedef uint32_t uart_baudRateDefType;
-typedef uint8_t uart_dataDefType;
-typedef uart_callback_t uart_callbackDefType;
-
-
+extern uart_interfaces * UART_interfacesCfg;
+extern uartConfigType* UART_ConfigurationCfg;
 
 #endif /* AX_UART_CFG_H_ */
