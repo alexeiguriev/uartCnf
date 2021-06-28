@@ -1,0 +1,2 @@
+# uartCfg
+Uart module configuration
